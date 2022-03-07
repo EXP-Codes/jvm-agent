@@ -27,6 +27,12 @@ maven 的 `settings.yml` 配置 sonatype 中央仓库：
 
 ```xml
 <mirror>
+    <id>mvnrepository</id>
+    <mirrorOf>mvnrepository</mirrorOf>
+    <url>http://mvnrepository.com/</url>
+</mirror>
+
+<mirror>
     <id>sonatype</id>
     <mirrorOf>sonatype</mirrorOf>
     <url>https://s01.oss.sonatype.org/</url>
