@@ -51,6 +51,30 @@
                 </configuration>
             </plugin>
 
+            <!-- 指定 MANIFEST.MF 内的参数 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Premain-Class>exp.libs.jvm.JVMAgent</Premain-Class>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- 生成 javadoc -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
