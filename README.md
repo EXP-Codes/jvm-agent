@@ -45,6 +45,6 @@ maven 的 `settings.yml` 配置 sonatype 中央仓库：
 <dependency>
     <groupId>com.exp-blog</groupId>
     <artifactId>jvm-agent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
